@@ -1,0 +1,73 @@
+  REPORT---->> PESCSE1201801722
+
+
+Introduction:
+
+1)"Intal" can be defined as array of of a large inetger where the each individual digit is stored as character in susbsequent blocks of character array
+2)Intal is allocated by using character array but where as integer is generally supported by variables
+ The different data types supported in C are:-
+1)Double
+2)Integer
+3)Long int
+4)Float
+3)Major applications of intal are
+-> MAjorly used in math of high end space stattions where calculations are in 10 power 20 +
+-> All basic operations can be also done with large integers which cant be holded by a data types in C
+-> Large numbers can de dealt with easily
+
+
+
+Implementation:
+
+char* intal_add(const char* intal1, const char* intal2):
+The approach we are using here is,two arrays are taken and are reversed by helper functions then last digits are iteratively added keeping the carry factor later returing added character array.
+
+int intal_compare(const char* intal1, const char* intal2):
+The approach we are using here is, frst compare string lengths if even they are same they check individual digits
+
+char* intal_diff(const char* intal1, const char* intal2):
+The approach we are using here is,the two arrays are taken and are reversed by helper functions then last digits are iterately subtracted  keeping the carry factor later returing added character array
+
+char* intal_multiply(const char* intal1, const char* intal2):
+The approach we are using here is, to take each digit of multiplier multiply with whole multiplicand using for inside a for loop and return required character array qq
+
+char* intal_mod(const char* intal1, const char* intal2):
+The approach we are using here is, to bring the value of intal2 as close as to intal1 then recursively substract the same and later return the required array
+
+char* intal_pow(const char* intal1, unsigned int n):
+The approach we are using here is, to create a array with value 1 and later untill n is finished in while loop multiply every time with the intal1 and later return the required array
+
+char* intal_gcd(const char* intal1, const char* intal2):
+The approach we are using here is, to follow standard euclidean algorithm where mod is found out by above approach given untill one of number becomes zero
+
+char* intal_fibonacci(unsigned int n):
+The approach we are using here is, to initial crreate 2 arrays with values "0" and "1" so that they are the frst two fibonacci numbers later until n is in while loop adding and updating intial 2 values ..lter returning required array
+
+char* intal_factorial(unsigned int n):
+The approach we are using here is, recursively where unitll n becomes 1 it keeps on calling funtions and calculation of n*(n-1)*...1 is done
+
+char* intal_bincoeff(unsigned int n, unsigned int k):
+The approach we are using here is, dyamic approach where we create a array of size of product of 2 coeeficient of binomial so that we can store all corresponding values and later return required value
+
+int intal_max(char **arr, int n):
+The approach we are using here is, to make a pointer pointing to initil array and a index variabe  and iterating from index 1 to last and if a array bigger is found pointer and index variable is updated..later returning the index
+
+int intal_min(char **arr, int n):
+The approach we are using here is, to make a pointer pointing to initil array and a index variabe  and iterating from index 1 to last and if a array bigger is found pointer and index variable is updated..later returning the index
+
+int intal_search(char **arr, int n, char* key):
+The approach we are using here is, O(n) where the key is compared with every large array if the key is found that index is returned else -1 is returned.
+
+int intal_binsearch(char **arr, int n, char* key):
+The approach we are using here is, O(logn) where array is sorted and we find key in 2 halfs of arrays recursively...if found index is returned else -1 is returned.
+
+void intal_sort(char **arr, int n):
+The approach we are using here is, using merge sort to sort half and half arrays then merging them together recursively..later the old array is copied to new created sorted array
+
+char* coin_row_problem(char **arr, int n):
+The approach we are using here is, to use Dynamic programming where approach is O(n) and every index is updated to as max of(sum of present index value + sum of (present index-2) value,value of present index -1) later the last index value is returned
+
+FUTURE WORK:
+
+1)Some more functions which could have been added is sorting in decreasing order,approximate division,approximate square root etc 
+2)If no restrictions are there just these things in the library and they can be used as basic operations of math are done on integers but this on large numbers

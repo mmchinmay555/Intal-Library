@@ -1,0 +1,125 @@
+
+PES1201801480--------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. INTRODUCTION
+
+ i. What is an intal?
+	- Intal is an array of of a large inetger where the each digit is stored as a character in a character array.
+
+	
+ii. How is it different from an integer in general and integer data types supported by C?
+	
+	- General int data type is restricted to a certain limit, by making use of intal we can perform calculations on larger 
+	  values which int cannot hold, hence intal is much appreciated.
+   
+iii. Applications of intal:
+		
+		- Perform  calculations on large numerical values.
+		- DataBase Applications where the numeric values are in string
+	
+
+
+
+
+2. IMPLEMENTATION
+   
+intal_add:
+	
+	- First I make sure both intals are of same length, if not I'll add zeroes in the beggining to make their length same.
+	
+	- Then we continue to loop through both the intals converting each character to int and adding them and storing the 
+	  1th place of sum in an another array and storing the remaing into variable and adding the same in the next loop.
+	  Similar to old school addition
+	
+	- After completing this process, we remove the extra zeroes if exist at the beginning, and return the sum.
+	
+intal_compare:
+	
+	- First I make sure both intals are of same length, if not I'll add zeroes in the beggining to make their length same.
+	
+	- We loop through both the intals comparing each character unitl we find any mismatch, and return the appropriate value.
+	
+intal_diff:
+
+	- First I make sure both intals are of same length, if not I'll add zeroes in the beggining to make their length same.
+	
+	- We then compare both intals to make sure which intal to be subtracted from the other, as we need to return a non neg. 
+	  value. Then we loop through both the intals converting them to int, and subratacting the smaller one from the bigger 
+	  and stroing the overflow in a separate variable. Which we use to subtract from the next value in the upcoming loop.
+	  
+	- After completing this process, we remove the extra zeroes if exist at the beginning, and return the difference.
+	
+intal_multiply:
+
+	- Here we loop through the multiplier and multiply with the multiplicand and add the result into the product array,
+	  which we return it.
+	  
+intal_mod:
+
+	- Here we use intal_compare to compare both the intals.
+		- if intal1 in lesser than intal2 we return intal1
+		- then we continue to subtract intal2 from intal1 recurssively unitl we meet the required condition, storing the 
+		  difference in an array.
+	
+	- finally we return the array.
+	
+intal_pow:
+
+	- We checck for the value of n,
+		- if n == 0,  then we return 1
+		- if n == 1,  then we return the intal itself
+	
+	- else we multiply(intal_multiply) intal with itself and itteratievly we decrement the value of n,  unitl the value 
+	 of n becomes 0.
+	 
+	 
+	- Finally we return the product array.
+	
+intal_gcd:
+	
+	- Here we use Euclid's algorith to calculate the GCD recurrsively.
+
+intal_fibbonacci:
+
+	- Here we initialize two intals with value 1 and 0, and we loop for n times, and store the result in an
+	  array and return the same
+	  
+intal_factorial:
+	
+	- We initialize two array with values 1 and loop n times multiplying in incrementing one of the array by 1.
+	
+	- store the product in one array and return the same array after the loop ends.
+	
+intal_bincoeff:
+
+	- Here we use dyamic approach where we create a array of size of product of 2 coeficient of binomial which we
+	  store all the corresponding values and return required value.
+	  
+intal_max:
+
+	- Here we use another char array to store the max value by using intal_compare to compare the values and as we loop
+	  through the array of intals, and after reaching the end the value of max is returned.
+	  
+intal_min:
+	
+	- Similarly we use min array to store the minimum value in the array,  and intal_compare to compare the values.
+	
+intal_search:
+	
+	-  Here we loop through the array of intals, comparing the values with the key. We use intal_compare to compare the values.
+	
+intal_binsearch:
+
+	- Similar to the normal binary search method but here we use intal_compare to compare the values in the array.
+	
+intal_sort:
+	
+	- Here I have implemented MergeSort algorithm to sort the array. I have used 2 static function mergesort and merge
+	  as a helper function to perform the operation.
+	  
+coin_row:
+
+	- Here we make use of the Dynamic approach,  where every index is updated to as max(sum of current index value + sum of (current index-2) 	   		  value,value of present index -1).  Index value is returned.
+
+	
